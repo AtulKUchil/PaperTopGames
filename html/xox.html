@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XOX Game</title>
+        <link rel="stylesheet" href="../css/xox.css">
+    </head>
+    <body>
+        <nav>
+            <div class="topnav">
+                <button onclick="printArray()">Home</button>
+                <p id="turn">Turn: Player 1</p>
+                <button onclick="arrayReset()">Reset</button>
+            </div>
+
+        </nav>
+        <div class="gameArea">
+            <button id="m00" onclick="insertIntoArray(0,0)"></button>
+            <button id="m01" onclick="insertIntoArray(0,1)"></button>
+            <button id="m02" onclick="insertIntoArray(0,2)"></button>
+            <button id="m10" onclick="insertIntoArray(1,0)"></button>
+            <button id="m11" onclick="insertIntoArray(1,1)"></button>
+            <button id="m12" onclick="insertIntoArray(1,2)"></button>
+            <button id="m20" onclick="insertIntoArray(2,0)"></button>
+            <button id="m21" onclick="insertIntoArray(2,1)"></button>
+            <button id="m22" onclick="insertIntoArray(2,2)"></button>
+        </div>
+    </body>
+    <script src="../js/xox.js"></script>
+</html>
