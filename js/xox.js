@@ -4,8 +4,10 @@ for (var i=0;i<3;i++){
 }
 var player = false;
 var check = false;
+var count = 0;
 
 function insertIntoArray(i, j){
+    count = count + 1;
     if(!player){
         xoxArray[i][j] = 0;
         player = !player;
@@ -21,12 +23,15 @@ function insertIntoArray(i, j){
         document.getElementById("turn").innerHTML = "Turn: Player 1";
     }
     check = checkWin();
+    if(count == 9 && !check){
+        arrayReset();
+    }
     if(check){
         if(player){
-            window.alert("Player 1 wins");
+            window.location.href = './player1Wins.html';
         }
         else{
-            window.alert("Player 2 wins");
+            window.location.href = './player2Wins.html';
         }
         arrayReset();
     }
@@ -37,6 +42,7 @@ function printArray(){
 }
 
 function arrayReset(){
+    count = 0;
     document.getElementById("turn").innerHTML = "Turn: Player 1";
     player = false;
     for (var i=0;i<3;i++){
