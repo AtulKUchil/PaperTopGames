@@ -24,7 +24,7 @@ function insertIntoArray(i, j){
     }
     check = checkWin();
     if(count == 9 && !check){
-        arrayReset();
+        window.location.href = './tied.html';
     }
     if(check){
         if(player){
