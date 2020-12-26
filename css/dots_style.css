@@ -7,7 +7,8 @@ body, label, div, span {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #2222;
+  /* background-color: rgba(22, 22, 22, 0.133);	 */
+  background-color: #5CDB95;
 }
 
 @font-face {
@@ -22,7 +23,8 @@ body {
 	justify-content: flex-start;
   padding: 20px;
   height: 100vh;
-  background-color: #2a2a2a;
+  /* background-color: #2a2a2a; */
+  background-color: #05386B;
 }
 
 label, .player {
@@ -33,7 +35,8 @@ label, .player {
 /* GRID SIZE */
 
 label {
-  color: #ffc;
+  /* color: #ffc; */
+  color: white;
   font: 30px Dense;
 }
 
@@ -51,7 +54,8 @@ label input {
 }
 
 .player span {
-	color: #ffc;
+	/* color: #ffc; */
+	color: white;
 	font: 30px Dense;
 }
 
@@ -75,13 +79,14 @@ label input {
 
 .turn {
 	position: absolute;
-	color: #ffc;
+	/* color: #ffc; */
+	color: #05386B;
 	right: -40px;
 	transition: .3s;
 }
 
 .p2-turn {
-	margin-top: 50px;
+	margin-top: 95px;
 }
 
 /* PLAY AREA */
@@ -91,6 +96,17 @@ label input {
 }
 
 canvas {
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: #8EE4AF;
   border-radius: 5px;
+}
+
+button{
+	width: 100%;
+	margin: 15px;
+	font-family: Dense;
+	font-size: 40px;
+	color: white;
+	background-color: #05386B;
+	border: none;
 }

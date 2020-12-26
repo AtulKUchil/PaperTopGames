@@ -200,7 +200,7 @@ function checkForSquare(link) {
 		}
 
 		// check for square to right
-		if (link.start.gx !== 0) {
+		if (link.start.gx !== dotCount - 1) {
 			const rightTop = linksArray.find(l => l.start.gx === link.start.gx && l.end.gx === link.start.gx + 1 && l.start.gy === link.start.gy);
 			const rightRight = linksArray.find(l => l.start.gy === link.start.gy && l.end.gy === link.end.gy && l.start.gx === link.start.gx + 1);
 			const rightBottom = linksArray.find(l => l.start.gx === link.end.gx && l.end.gx === link.end.gx + 1 && l.start.gy === link.end.gy);
@@ -306,6 +306,7 @@ function changeSquareColour(e, player) {
 	const oldColour = colours[`p${player}`];
 	const newColour = e.target.value;
 
+	console.log("called");
 	playerSquares = squaresArray.filter(square => square.colour === oldColour);
 	playerSquares.forEach(square => square.colour = newColour);
 
@@ -315,6 +316,7 @@ function changeSquareColour(e, player) {
 function updateScores() {
 	scores[turn] = scores[turn] + 1;
 	document.querySelector(`#${turn}Score`).innerHTML = scores[turn];
+	win();
 }
 
 // EVENT LISTENERS
@@ -330,3 +332,19 @@ document.querySelector('#p1Colour').addEventListener('change', function(e) {
 document.querySelector('#p2Colour').addEventListener('change', function(e) {
 	changeSquareColour(e, 2);
 });
+
+function win(){
+	var maxBoxes = (document.querySelector("#gridSize").value - 1) * (document.querySelector("#gridSize").value - 1);
+	var checkBoxes = scores["p1"] + scores["p2"];
+	if(checkBoxes == maxBoxes){
+		if(scores["p1"] > scores["p2"]){
+			location.href = "player1Wins.html"
+		}
+		else if(scores["p2"] > scores["p1"]){
+			location.href = "player2Wins.html"
+		}
+		else{
+			location.href = "tied.html"
+		}
+	} 
+}
