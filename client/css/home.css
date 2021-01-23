@@ -52,7 +52,15 @@ body{
 }
 
 .topnav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: #05386B;
     /* background-image: linear-gradient(180deg, #e48f75 0%, #ce672c 35%, #81310c 100%); */
     margin-bottom: 5px;
+}
+
+.topnav button{
+    background-color: #05386B;
+    color: white;
+    border: none;
 }
