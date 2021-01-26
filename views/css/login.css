@@ -1,0 +1,58 @@
+body{
+    background-color: #5CDB95;
+}
+
+.PTG{
+    color: #05386B;
+    margin-top: 15%;
+    margin-left: 5%;
+    font-size: 40px;
+    text-transform: capitalize;
+    float: left;
+}
+
+.login{
+    background-color: #05386B;
+    padding: 25px;
+    border-radius: 30px;
+    border-style: solid;
+    display: inline;
+    float: right;
+    margin-top: 10%;
+    margin-right: 15%;
+    color: #5CDB95 ; 
+    width: 300px;
+}   
+
+.emailBox{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+    margin-top: 12%;
+}
+
+#email, #pass, .button{
+    width: 300px;
+    height: 30px;
+    background-color:#5CDB95;
+    border-radius: 5px;
+    color: #05386B;
+}
+
+.pswdBox{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+}
+
+.submitBox{
+    margin: 10% auto 5% auto;
+}
+
+.button{
+    background-color: #379683;
+}
+
+h1{
+    text-align: center;
+}
